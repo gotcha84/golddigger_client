@@ -95,6 +95,7 @@ catkin_package(
 # include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
+  include
 )
 
 ## Declare a cpp library
@@ -103,16 +104,14 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-# add_executable(golddigger_client_node src/golddigger_client_node.cpp)
+add_executable(light src/light.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(golddigger_client_node golddigger_client_generate_messages_cpp)
+add_dependencies(light golddigger_client_gencpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(golddigger_client_node
-#   ${catkin_LIBRARIES}
-# )
+target_link_libraries(light ${catkin_LIBRARIES})
 
 #############
 ## Install ##

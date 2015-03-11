@@ -8,4 +8,8 @@
 		<remap from = "camera/image_raw" to = "camera/visible/image" />
 	</node>
 
+	<!-- 
+	<node name="light" pkg="golddigger_client" type="light" output="screen" />
+	-->
+
 </launch>
